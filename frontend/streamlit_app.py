@@ -3,7 +3,6 @@ import requests
 
 # FastAPI endpoint
 API_URL = 
-
 st.set_page_config(
     page_title="House Price Prediction",
     layout="centered"
@@ -25,7 +24,7 @@ if st.button("Predict Price"):
         response = requests.post(API_URL, json=payload)
 
         if response.status_code == 200:
-            result = resonse.json()
+            result = response.json()
             price = result["predicted_price"]
             st.success(f"Estimated Price: Rs. {price:,.2f}")
     
