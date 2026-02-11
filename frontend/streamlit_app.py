@@ -30,3 +30,11 @@ if st.button("Predict Price"):
     
     except requests.exceptions.connectionError:
         st.error("Cannot connect to FastAPI backend. Is it running?")
+
+        app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://git-cicd-1-ngtw.onrender.com"],  # Or ["https://git-cicd-1-ngtw.onrender.com"]
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
