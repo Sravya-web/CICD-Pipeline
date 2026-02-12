@@ -8,6 +8,8 @@ st.set_page_config(
     layout="centered"
 )
 
+
+
 st.title("House Price Prediction")
 st.write("predict house price using a Linear Regression model")
 
